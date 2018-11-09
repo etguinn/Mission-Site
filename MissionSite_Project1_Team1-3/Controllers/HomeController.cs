@@ -26,5 +26,10 @@ namespace MissionSite_Project1_Team1_3.Controllers
 
             return View();
         }
+
+        public ActionResult Missions()
+        {
+            return View();
+        }
     }
 }
