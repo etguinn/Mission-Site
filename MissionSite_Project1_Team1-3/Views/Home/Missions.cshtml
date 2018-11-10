@@ -3,5 +3,39 @@
     ViewBag.Title = "Missions";
 }
 
+<head>
+    <link href="~/Content/CustomCSS.css" rel="stylesheet" />
+</head>
+
 <h2>Missions</h2>
 
+<div class="dropdown">
+    <button onclick="getDropdown()" class="dropbtn">Dropdown</button>
+    <div id="myDropdown" class="dropdown-content">
+        <a href="@Url.Action("LondonEngland", "Home")">London England</a>
+        <a href="@Url.Action("ChinaHongKong", "Home")">China Hong Kong</a>
+        <a href="@Url.Action("OgdenUtah", "Home")">Utah Ogden</a>
+    </div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    function getDropdown() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtn')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>

@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "MissionFAQ";
+}
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<!-- Breadcrumb -->
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="@Url.Action("Index","Home")">Home</a></li>
+        <li class="breadcrumb-item"><a href="@Url.Action("Missions","Home")">Missions</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@ViewBag.mTitle Mission</li>
+    </ol>
+</nav>
+
+<!-- Main mission information -->
+<div class="jumbotron">
+    <h2>About the</h2>
+    <h1>@ViewBag.mTitle Mission</h1>
+    <p>
+        <img src="@ViewBag.mFlag" alt="Mission Flag" style="width:30%;align-content:center;"/>
+    </p>
+    <p><b>Current Mission President:</b> @ViewBag.mPresident</p>
+    <p><b>Mission Address:</b> @ViewBag.mAddress</p>
+    <p><b>Language(s):</b> @ViewBag.mLanguage</p>
+    <p><b>Climate:</b> @ViewBag.mClimate</p>
+    <p><b>Dominant Religion(s):</b> @ViewBag.mReligion</p>
+</div>
+
+<!-- FAQs -->
+<div>
+    <button onclick="getDroppedText('Drop1')" class="w3-btn w3-block w3-black w3-left-align">How many members are in the mission?</button>
+    <div id="Drop1" class="w3-container w3-hide">
+        <h4>Section 1</h4>
+        <p>Some text..</p>
+        <p>
+            <input type="submit" value="Have a better answer?" onclick="">
+        </p>
+    </div>
+
+    <button onclick="getDroppedText('Drop2')" class="w3-btn w3-block w3-black w3-left-align">How many members are in the mission?</button>
+    <div id="Drop2" class="w3-container w3-hide">
+        <h4>Section 1</h4>
+        <p>Some text..</p>
+        <p>
+            <input type="submit" value="Have a better answer?" onclick="">
+        </p>
+    </div>
+
+    <button onclick="getDroppedText('Drop3')" class="w3-btn w3-block w3-black w3-left-align">How many members are in the mission?</button>
+    <div id="Drop3" class="w3-container w3-hide">
+        <h4>Section 1</h4>
+        <p>Some text..</p>
+        <p>
+            <input type="submit" value="Have a better answer?" onclick="">
+        </p>
+    </div>
+
+</div>
+
+<br />
+<br />
+
+<!-- Comment box -->
+<div>
+    <form action="" method="post">
+        <textarea name="New Question" id="ContactForm" placeholder="Ask a new question . .">
+        </textarea>
+        <br />
+        <input type="submit" value="Post">
+    </form>
+</div>
+
+<!-- JavaScript -->
+<script>
+    function getDroppedText(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
