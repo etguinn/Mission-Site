@@ -50,7 +50,7 @@ namespace MissionSite_Project1_Team1_3.Controllers
             ViewBag.mFlag = "/Content/Images/UKFlag.png";
             ViewBag.mPresident = "President Mark W. Stevens";
             ViewBag.mAddress = "64-68 Princes Gate, Exhibition Road, South Kensington, London England";
-            ViewBag.mLanguage = "English";
+            ViewBag.mLanguage = "English, Mandarin just for testing to see if the git works";
             ViewBag.mReligion = "Church of England, Catholic";
             return View("MissionFAQ");
         }
@@ -59,7 +59,7 @@ namespace MissionSite_Project1_Team1_3.Controllers
         {
             ViewBag.mTitle = "China Hong Kong";
             ViewBag.mFlag = "/Content/Images/HongKongFlag.png";
-            ViewBag.mPresident = "President Maurice Lam";
+            ViewBag.mPresident = "President Maurice Lam, Ethan Guinn is the future president";
             ViewBag.mAddress = "18 Dorset Crescent, Kowloon Tong, Kowloon, Hong Kong";
             ViewBag.mLanguage = "Cantonese, Mandarin, English, and Tagalog";
             ViewBag.mReligion = "Ancestor worship, Buddhism, Taoism, and Christianity";
