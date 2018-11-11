@@ -66,14 +66,14 @@ namespace MissionSite_Project1_Team1_3.Controllers
             return View("MissionFAQ");
         }
 
-        public ActionResult UtahOgden()
+        public ActionResult OgdenUtah()
         {
             ViewBag.mTitle = "Utah Ogden";
-            ViewBag.mFlag = "";
-            ViewBag.mPresident = "";
-            ViewBag.mAddress = "";
-            ViewBag.mLanguage = "";
-            ViewBag.mReligion = "";
+            ViewBag.mFlag = "/Content/Images/UtahOgdenFlag.png";
+            ViewBag.mPresident = "President Maurice D. Hiers";
+            ViewBag.mAddress = "4380 S Orchard Ave, South Ogden, UT 84403, United States";
+            ViewBag.mLanguage = "English";
+            ViewBag.mReligion = "LDS";
             return View("MissionFAQ");
         }
     }
