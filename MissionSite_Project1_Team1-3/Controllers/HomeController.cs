@@ -15,6 +15,10 @@ namespace MissionSite_Project1_Team1_3.Controllers
 {
     public class HomeController : Controller
     {
+        public static Queue<string> UKQ = new Queue<string>();
+        public static Queue<string> HKQ = new Queue<string>();
+        public static Queue<string> ODQ = new Queue<string>();
+
         public ActionResult Index()
         {
             return View();
@@ -30,7 +34,7 @@ namespace MissionSite_Project1_Team1_3.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
-
+        
             return View();
         }
 
@@ -39,7 +43,7 @@ namespace MissionSite_Project1_Team1_3.Controllers
             return View();
         }
 
-        public ActionResult MissionFAQ(string MissionName)
+        public ActionResult MissionFAQ(string MissionName) //this parameter MissionName is not used anywhere
         {
             return View();
         }
@@ -50,20 +54,34 @@ namespace MissionSite_Project1_Team1_3.Controllers
             ViewBag.mFlag = "/Content/Images/UKFlag.png";
             ViewBag.mPresident = "President Mark W. Stevens";
             ViewBag.mAddress = "64-68 Princes Gate, Exhibition Road, South Kensington, London England";
-            ViewBag.mLanguage = "English, Mandarin just for testing to see if the git works";
+            ViewBag.mLanguage = "English, Mandarin";
             ViewBag.mReligion = "Church of England, Catholic";
+
+            ViewBag.Qs = UKQ;
             return View("MissionFAQ");
+        }
+        public ActionResult AddUKQ(string question)
+        {
+            UKQ.Enqueue(question);
+            return RedirectToAction("LondonEngland");
         }
 
         public ActionResult ChinaHongKong()
         {
             ViewBag.mTitle = "China Hong Kong";
             ViewBag.mFlag = "/Content/Images/HongKongFlag.png";
-            ViewBag.mPresident = "President Maurice Lam, Ethan Guinn is the future president";
+            ViewBag.mPresident = "President Maurice Lam";
             ViewBag.mAddress = "18 Dorset Crescent, Kowloon Tong, Kowloon, Hong Kong";
             ViewBag.mLanguage = "Cantonese, Mandarin, English, and Tagalog";
             ViewBag.mReligion = "Ancestor worship, Buddhism, Taoism, and Christianity";
+            
+            ViewBag.Qs = HKQ;
             return View("MissionFAQ");
+        }
+        public ActionResult AddHKQ(string question)
+        {
+            HKQ.Enqueue(question);
+            return RedirectToAction("ChinaHongKong");
         }
 
         public ActionResult OgdenUtah()
@@ -74,7 +92,14 @@ namespace MissionSite_Project1_Team1_3.Controllers
             ViewBag.mAddress = "4380 S Orchard Ave, South Ogden, UT 84403, United States";
             ViewBag.mLanguage = "English";
             ViewBag.mReligion = "LDS";
+            
+            ViewBag.Qs = ODQ;
             return View("MissionFAQ");
+        }
+        public ActionResult AddODQ(string question)
+        {
+            ODQ.Enqueue(question);
+            return RedirectToAction("OgdenUtah");
         }
     }
 }
