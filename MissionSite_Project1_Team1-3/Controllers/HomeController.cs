@@ -54,6 +54,7 @@ namespace MissionSite_Project1_Team1_3.Controllers
             ViewBag.mFlag = "/Content/Images/UKFlag.png";
             ViewBag.mPresident = "President Mark W. Stevens";
             ViewBag.mAddress = "64-68 Princes Gate, Exhibition Road, South Kensington, London England";
+            ViewBag.mClimate = "Cold; temperate";
             ViewBag.mLanguage = "English, Mandarin";
             ViewBag.mReligion = "Church of England, Catholic";
 
@@ -72,6 +73,7 @@ namespace MissionSite_Project1_Team1_3.Controllers
             ViewBag.mFlag = "/Content/Images/HongKongFlag.png";
             ViewBag.mPresident = "President Maurice Lam";
             ViewBag.mAddress = "18 Dorset Crescent, Kowloon Tong, Kowloon, Hong Kong";
+            ViewBag.mClimate = "Hot and humid";
             ViewBag.mLanguage = "Cantonese, Mandarin, English, and Tagalog";
             ViewBag.mReligion = "Ancestor worship, Buddhism, Taoism, and Christianity";
             
@@ -90,6 +92,7 @@ namespace MissionSite_Project1_Team1_3.Controllers
             ViewBag.mFlag = "/Content/Images/UtahOgdenFlag.png";
             ViewBag.mPresident = "President Maurice D. Hiers";
             ViewBag.mAddress = "4380 S Orchard Ave, South Ogden, UT 84403, United States";
+            ViewBag.mClimate = "Hot and dry";
             ViewBag.mLanguage = "English";
             ViewBag.mReligion = "LDS";
             
