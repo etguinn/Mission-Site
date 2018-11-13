@@ -31,19 +31,54 @@
 <!-- FAQs -->
 <div>
     <h3>Mission FAQ</h3>
+
+    <!-- Default Questions -->
+    <button onclick="getDroppedText('drop1')" class="w3-btn w3-block w3-black w3-left-align">How many members live in this mission?</button>
+    <div id="drop1" class="w3-container w3-hide">
+        <h4>160,000 members</h4>
+        <p>6 stakes and 3 branches</p>
+        <form id="myDIV" action="" method="post" style="display:block;">
+            <input type="text" name="answer" id="AnswerForm" placeholder="Write your answer here . ." />
+            <input type="submit" value="Post an answer" />
+        </form>
+        <br />
+    </div>
+    <button onclick="getDroppedText('drop2')" class="w3-btn w3-block w3-black w3-left-align">Do the missionaries have iPhones here?</button>
+    <div id="drop2" class="w3-container w3-hide">
+        <h4>Yes, but only those who work in the office.</h4>
+        <p>All others have Nokia phones.</p>
+        <form id="myDIV" action="" method="post" style="display:block;">
+            <input type="text" name="answer" id="AnswerForm" placeholder="Write your answer here . ." />
+            <input type="submit" value="Post an answer" />
+        </form>
+        <br />
+    </div>
+    <button onclick="getDroppedText('drop3')" class="w3-btn w3-block w3-black w3-left-align">How many people are typically baptized every month in the @ViewBag.mTitle Mission?</button>
+    <div id="drop3" class="w3-container w3-hide">
+        <h4>Recent average: 150 per month</h4>
+        <p>This number changes depending on the time of the year.</p>
+        <form id="myDIV" action="" method="post" style="display:block;">
+            <input type="text" name="answer" id="AnswerForm" placeholder="Write your answer here . ." />
+            <input type="submit" value="Post an answer" />
+        </form>
+        <br />
+    </div>
+
     @{ int iCount = 0;}
     @foreach (var sQuestion in ViewBag.Qs)
     {
         <button onclick="getDroppedText('@iCount.ToString()')" class="w3-btn w3-block w3-black w3-left-align">@sQuestion</button>
         <div id="@iCount.ToString()" class="w3-container w3-hide">
-            <h4>Section 1</h4>
-            <p>Some text..</p>
-            <p>
-                <input type="submit" value="Have a better answer?" onclick="">
-            </p>
+            <h4>No answer yet.</h4>
+            <p></p>
+            <form id="myDIV" action="" method="post" style="display:block;">
+                <input type="text" name="answer" id="AnswerForm" placeholder="Write your answer here . ." />
+                <input type="submit" value="Post an answer" />
+            </form>
+            <br />
         </div>
         iCount++;
-     }
+    }
 </div>
 
 <br />
@@ -88,6 +123,15 @@
             x.className += " w3-show";
         } else {
             x.className = x.className.replace(" w3-show", "");
+        }
+    }
+
+    function showAnswerForm() {
+        var x = document.getElementById("myDIV");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
         }
     }
 </script>
