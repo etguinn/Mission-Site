@@ -161,6 +161,7 @@
     <Content Include="Content\CustomCSS.css" />
     <Content Include="Content\Images\HongKongFlag.png" />
     <Content Include="Content\Images\mGroom.jpg" />
+    <Content Include="Content\Images\MissionBackground.jpg" />
     <Content Include="Content\Images\mNetwork.gif" />
     <Content Include="Content\Images\mPrep.jpg" />
     <Content Include="Content\Images\mRule.jpg" />
