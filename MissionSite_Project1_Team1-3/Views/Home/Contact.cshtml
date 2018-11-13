@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewBag.Title = "Contact";
 }
 
@@ -23,6 +23,7 @@
             <br />
             <label for="subject">Subject</label>
             <select id="subject" name="subject">
+                <option value="" disabled selected>Select your mission</option>
                 <option value="positive">Compliments to the developers</option>
                 <option value="navigationProbs">Navigation trouble</option>
                 <option value="incorrectInfo">Incorrect information</option>
@@ -37,12 +38,15 @@
 
 </body>
 <br />
+<h4><b>Mission: Possible</b> Address:</h4>
 <address>
     Service Blvd<br />
     Provo, Utah 84604<br />
     <abbr title="Phone">P:</abbr>
     801.867.5309
 </address>
+
+<h5>Email us at <email>help@missionpossible.org</email></h5>
 
 <address>
     <strong>Support:</strong>   <a href="https://lds.org">lds.org</a><br />
