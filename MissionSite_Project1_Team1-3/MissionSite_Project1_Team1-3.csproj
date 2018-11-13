@@ -160,7 +160,13 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CustomCSS.css" />
     <Content Include="Content\Images\HongKongFlag.png" />
+    <Content Include="Content\Images\mGroom.jpg" />
+    <Content Include="Content\Images\mNetwork.gif" />
+    <Content Include="Content\Images\mPrep.jpg" />
+    <Content Include="Content\Images\mRule.jpg" />
     <Content Include="Content\Images\MTC.jpg" />
+    <Content Include="Content\Images\mVid.jpg" />
+    <Content Include="Content\Images\mWhy.jpg" />
     <Content Include="Content\Images\UKFlag.png" />
     <Content Include="Content\Images\UtahOgdenFlag.png" />
     <Content Include="Content\Images\WorldMap.gif" />
